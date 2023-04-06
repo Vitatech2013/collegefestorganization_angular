@@ -31,6 +31,12 @@ import { EventsComponent } from './Admin/Events/events/events.component';
 import { ChangePwdComponent } from './Admin/change-pwd/change-pwd.component';
 import { EditOrgComponent } from './Admin/Organizers/edit-org/edit-org.component';
 import { EditFestComponent } from './Admin/Fest/edit-fest/edit-fest.component';
+import { StudentHomeComponent } from './Student/student-home/student-home.component';
+import { StdChngPwdComponent } from './Student/std-chng-pwd/std-chng-pwd.component';
+import { StdProfileComponent } from './Student/std-profile/std-profile.component';
+import { StdViewFestComponent } from './Student/std-view-fest/std-view-fest.component';
+import { StdViewEventsComponent } from './Student/std-view-events/std-view-events.component';
+import { StdViewCollegeComponent } from './Student/std-view-college/std-view-college.component';
 
 
 
@@ -59,6 +65,12 @@ import { EditFestComponent } from './Admin/Fest/edit-fest/edit-fest.component';
     ChangePwdComponent,
     EditOrgComponent,
     EditFestComponent,
+    StudentHomeComponent,
+    StdChngPwdComponent,
+    StdProfileComponent,
+    StdViewFestComponent,
+    StdViewEventsComponent,
+    StdViewCollegeComponent,
 
   ],
   imports: [

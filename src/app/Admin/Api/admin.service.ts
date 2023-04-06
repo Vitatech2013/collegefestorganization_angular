@@ -49,6 +49,5 @@ export class AdminService {
   }
   ChngPwd(id:any,data:any){
     return this.http.put('http://localhost:5000/admin/updatepassword/' +id ,data)
-
   }
 }

@@ -9,22 +9,17 @@
             <th scope="col">Description</th>
             <th scope="col">Organizer</th>
             <th scope="col">File</th>
-            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let F of ViewFest index as i">
             <th>{{i+1}}</th>
-            <td>{{F.festname | date}}</td>
+            <td>{{F.festname}}</td>
             <td>{{F.startfrom | date}}</td>
-            <td>{{F.end}}</td>
+            <td>{{F.end | date}}</td>
             <td>{{F.description}}</td>
             <td>{{F.username}}</td>
             <td><img src={{F.file}} width="80px" height="80px"></td>
-            <td>
-                <a (click)="edit(F)"><span class="material-symbols-outlined edit">edit</span></a>&nbsp;
-                <a (click)="Delete(F)"><span class="material-symbols-outlined delete">delete</span></a>
-            </td>
           </tr>
         </tbody>
       </table>

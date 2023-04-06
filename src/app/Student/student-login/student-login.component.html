@@ -1,1 +1,33 @@
-<p>student-login works!</p>
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="StudentloginForm" (ngSubmit)="Login()">
+          <h2>Student-Login</h2>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>UserName</mat-label>
+            <input 
+             matInput
+             placeholder="User Name"
+             class="form-control" 
+             formControlName="username"
+            >
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+             matInput
+             type="password"
+             placeholder="Password" 
+             class="form-control" 
+             formControlName="pwd"
+            >
+          </mat-form-field>
+          <button mat-raised-button color="accent" type="submit">Login</button>
+          <div class="row mt-2">
+          <a routerLink="/Home/stdRegister">Register Now ?</a>
+        </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+

@@ -31,7 +31,6 @@ export class AdminLoginComponent{
       if(this.admin){
         localStorage.setItem('admin', JSON.stringify(res))
         this.Routes.navigate(['/Admin-Home'])
-        alert("Add")
       }else{
         alert('Wrong Credentials')
       }

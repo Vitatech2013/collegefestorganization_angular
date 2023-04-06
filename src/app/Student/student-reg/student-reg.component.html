@@ -1,1 +1,113 @@
-<p>student-reg works!</p>
+<div class="main">
+
+            <mat-card>
+                <mat-card-content>
+                    <form [formGroup]="StudentRegForm" (ngSubmit)="Register()">
+                      <h2>Register Form</h2>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>HallTicketno</mat-label>
+                                <input 
+                                 matInput
+                                 placeholder="HallTicketno"
+                                 class="form-control" 
+                                 formControlName="hallticketno"
+                                >
+                              </mat-form-field>
+                        </div>
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>UserName</mat-label>
+                                <input 
+                                 matInput
+                                 placeholder="User Name"
+                                 class="form-control" 
+                                 formControlName="username"
+                                >
+                              </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input 
+                                 matInput
+                                 placeholder="Password"
+                                 class="form-control" 
+                                 formControlName="pwd"
+                                >
+                              </mat-form-field>
+                        </div>
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>StudentName</mat-label>
+                                <input 
+                                 matInput
+                                 placeholder="Student Name"
+                                 class="form-control" 
+                                 formControlName="studentname"
+                                >
+                              </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>CollegeName</mat-label>
+                                <input 
+                                 matInput
+                                 placeholder="collegename"
+                                 class="form-control" 
+                                 formControlName="college"
+                                >
+                              </mat-form-field>
+                        </div>
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Branch</mat-label>
+                                <input 
+                                 matInput
+                                 placeholder="branch"
+                                 class="form-control" 
+                                 formControlName="branch"
+                                >
+                              </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Contactno</mat-label>
+                                <input 
+                                 matInput
+                                 placeholder="Contactno"
+                                 class="form-control" 
+                                 formControlName="contactno"
+                                >
+                              </mat-form-field>
+                        </div>
+                        <div class="col-sm-6">
+                            <mat-form-field class="full-width-input" appearance="outline">
+                                <mat-label>Email-Id</mat-label>
+                                <input 
+                                 matInput
+                                 placeholder="User Name"
+                                 class="form-control" 
+                                 formControlName="email"
+                                >
+                              </mat-form-field>
+                        </div>
+                      </div>
+                      <button mat-raised-button color="accent" type="submit">Register</button>
+                      <div class="row mt-2">
+                      <a routerLink="/Home/Student-login">Already Registered Login here ?</a>
+                    </div>
+                    </form>
+                  </mat-card-content>
+        
+            </mat-card>
+        </div>
+
+

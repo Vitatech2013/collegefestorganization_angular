@@ -1,3 +1,10 @@
+import { StudentRegComponent } from './Student/student-reg/student-reg.component';
+import { StdViewCollegeComponent } from './Student/std-view-college/std-view-college.component';
+import { StdViewFestComponent } from './Student/std-view-fest/std-view-fest.component';
+import { StdViewEventsComponent } from './Student/std-view-events/std-view-events.component';
+import { StdChngPwdComponent } from './Student/std-chng-pwd/std-chng-pwd.component';
+import { StdProfileComponent } from './Student/std-profile/std-profile.component';
+import { StudentHomeComponent } from './Student/student-home/student-home.component';
 import { ChangePwdComponent } from './Admin/change-pwd/change-pwd.component';
 import { EventsComponent } from './Admin/Events/events/events.component';
 import { ViewCollegeComponent } from './Admin/colleges/view-college/view-college.component';
@@ -23,6 +30,7 @@ const routes: Routes = [
     {path:'Admin-login',component:AdminLoginComponent},
     {path:'Organization-login',component:OrgLoginComponent},
     {path:'Student-login',component:StudentLoginComponent},
+    {path:'stdRegister',component:StudentRegComponent}
   ]},
   {path:'Admin-Home',component:AdminHomeComponent,children:[
     {path:'Add-Org',component:AddOrgComponent},
@@ -33,6 +41,13 @@ const routes: Routes = [
     {path:'View-College',component:ViewCollegeComponent},
     {path:'Events',component:EventsComponent},
     {path:'Changepwd',component:ChangePwdComponent}
+  ]},
+  {path:'Student-Home',component:StudentHomeComponent,children:[
+    {path:'profile',component:StdProfileComponent},
+    {path:'Stdchngpwd',component:StdChngPwdComponent},
+    {path:'StdView-Events',component:StdViewEventsComponent},
+    {path:'StdView-Fest',component:StdViewFestComponent},
+    {path:'StdView-College',component:StdViewCollegeComponent}
   ]}
 
 ];

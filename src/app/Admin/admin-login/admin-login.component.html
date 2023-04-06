@@ -4,6 +4,7 @@
         <form [formGroup]="adminloginForm" (ngSubmit)="Login()">
           <h2>Admin-Login</h2>
           <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>UserName</mat-label>
             <input 
              matInput
              placeholder="User Name"
@@ -12,6 +13,7 @@
             >
           </mat-form-field>
           <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Password</mat-label>
             <input
              matInput
              type="password"
