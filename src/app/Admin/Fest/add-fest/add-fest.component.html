@@ -1,0 +1,55 @@
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="addFestForm" (ngSubmit)="ADD()">
+          <h2>Add Fest</h2>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Fest Name</mat-label>
+            <input 
+             matInput
+             class="form-control" 
+             formControlName="festname"
+            >
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Start From</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="startfrom">
+            <mat-datepicker-toggle matIconSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Ends On</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="end">
+            <mat-datepicker-toggle matIconSuffix [for]="picker1">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline" >
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description"></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Type</mat-label>
+            <mat-select formControlName="username" placeholder="-- Select Type --">
+              <mat-option *ngFor="let L of OrgList" value="{{L.username}}">{{L.username}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <input  type="file" accept="image/*" class="form-control" formControlName="file" (change)="onSelectFile($event)">
+        <div class="btn mt-4">
+          <button mat-raised-button color="primary" type="submit" [disabled]="this.addFestForm.invalid">ADD</button>
+        </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+

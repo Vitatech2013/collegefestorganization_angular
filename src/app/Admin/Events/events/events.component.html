@@ -1,0 +1,38 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr  class="table-secondary">
+            <th scope="col">S.No</th>
+            <th scope="col">FestName</th>
+            <th scope="col">EventName</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Co-Ordinater-1</th>
+            <th scope="col">Co-Ordinater-2</th>
+            <th scope="col">Co-Ordinater-3</th>
+            <th scope="col">Valenteer-1</th>
+            <th scope="col">Valenteer-2</th>
+            <th scope="col">Valenteer-3</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let E of ViewEvents index as i">
+            <th>{{i+1}}</th>
+            <td>{{E.festname}}</td>
+            <td>{{E.eventname}}</td>
+            <td>{{E.date}}</td>
+            <td>{{E.time}}</td>
+            <td>{{E.coordinater1}}</td>
+            <td>{{E.coordinater2}}</td>
+            <td>{{E.coordinater3}}</td>
+            <td>{{E.valenteer1}}</td>
+            <td>{{E.valenteer2}}</td>
+            <td>{{E.valenteer3}}</td>
+            <td><img src={{E.file}} alt="img" width="40px" height="40px"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+

@@ -1,0 +1,85 @@
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="addCollegeForm" (ngSubmit)="ADD()">
+          <h2>Add College</h2>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Fest Name</mat-label>
+            <input 
+            type="text"
+             matInput
+             class="form-control" 
+             formControlName="festname"
+            >
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>College Name</mat-label>
+            <input 
+            type="text"
+             matInput
+             class="form-control" 
+             formControlName="college"
+            >
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Start From</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="startsfrom">
+            <mat-datepicker-toggle matIconSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Ends On</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="endon">
+            <mat-datepicker-toggle matIconSuffix [for]="picker1">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Contact no</mat-label>
+            <input 
+            type="number"
+             matInput
+             class="form-control" 
+             formControlName="contactno"
+            >
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Email-Id</mat-label>
+            <input 
+            type="email"
+             matInput
+             class="form-control" 
+             formControlName="email"
+            >
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Web Site</mat-label>
+            <input 
+            type="url"
+             matInput
+             class="form-control" 
+             formControlName="website"
+             placeholder="https://example.com"
+            >
+          </mat-form-field>
+
+          <input  type="file" accept="image/*" class="form-control" formControlName="file" (change)="onSelectFile($event)">
+        <div class="btn mt-4">
+          <button mat-raised-button color="primary" type="submit" [disabled]="this.addCollegeForm.invalid">ADD College</button>
+        </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+

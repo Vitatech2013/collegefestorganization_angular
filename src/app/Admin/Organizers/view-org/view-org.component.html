@@ -1,0 +1,32 @@
+<div class="table-responsive">
+<table class="table table-hover">
+    <thead class="thead-dark">
+      <tr  class="table-secondary">
+        <th scope="col">S.No</th>
+        <th scope="col">Name</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Email-Id</th>
+        <th scope="col">ContactNo</th>
+        <th scope="col">Type</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let O of ViewOrganization index as i">
+        <th>{{i+1}}</th>
+        <td>{{O.name}}</td>
+        <td>{{O.username}}</td>
+        <td>{{O.designation}}</td>
+        <td>{{O.email}}</td>
+        <td>{{O.contactno}}</td>
+        <td>{{O.selectname}}</td>
+        <td>
+            <a (click)="edit(O)"><span class="material-symbols-outlined edit">edit</span></a>&nbsp;
+            <a (click)="Delete(O)"><span class="material-symbols-outlined delete">delete</span></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
