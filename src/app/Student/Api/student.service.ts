@@ -14,8 +14,11 @@ export class StudentService {
   Register(data:any){
     return this.http.post('http://localhost:5000/Student/studentregistrations',data)
   }
+  ViewProfile(studentname:any){
+    return this.http.get('http://localhost:5000/Student/viewprofile?studentname='+ studentname)
+  }
   EditStd(id:any,data:any){
-    return this.http.put('http://localhost:5000/Student/up' + id,data)
+    return this.http.put('http://localhost:5000/Student/up/' + id,data)
   }
   ViewStd(){
     return this.http.get('http://localhost:5000/Student/viewstudent')   

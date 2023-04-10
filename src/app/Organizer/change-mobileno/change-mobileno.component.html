@@ -1,0 +1,46 @@
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="changeForm" (ngSubmit)="change()">
+          <h2>Change-Mobileno</h2>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Email-Id</mat-label>
+            <input 
+             matInput
+             class="form-control" 
+             formControlName="email"
+            >
+          </mat-form-field>
+          
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Mobileno</mat-label>
+            <input
+             matInput
+             type="text" 
+             class="form-control" 
+             formControlName="contactno"
+            >
+            <mat-error>
+              <small>Enter Old Mobileno with min 10 & max-length 10 numbers</small>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>New Mobileno</mat-label>
+            <input
+             matInput
+             type="text" 
+             class="form-control" 
+             formControlName="newcontactno"
+            >
+            <mat-error>
+              <small>Enter new Mobileno</small>
+            </mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" [disabled]="this.changeForm.invalid">ChangeMobileno</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+

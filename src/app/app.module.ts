@@ -37,6 +37,13 @@ import { StdProfileComponent } from './Student/std-profile/std-profile.component
 import { StdViewFestComponent } from './Student/std-view-fest/std-view-fest.component';
 import { StdViewEventsComponent } from './Student/std-view-events/std-view-events.component';
 import { StdViewCollegeComponent } from './Student/std-view-college/std-view-college.component';
+import { AddEventsComponent } from './Organizer/Events/add-events/add-events.component';
+import { ViewEventsComponent } from './Organizer/Events/view-events/view-events.component';
+import { EditEventsComponent } from './Organizer/Events/edit-events/edit-events.component';
+import { DeleteEventsComponent } from './Organizer/Events/delete-events/delete-events.component';
+import { FstDetailsComponent } from './Organizer/fst-details/fst-details.component';
+import { ChangeMobilenoComponent } from './Organizer/change-mobileno/change-mobileno.component';
+
 
 
 
@@ -71,6 +78,12 @@ import { StdViewCollegeComponent } from './Student/std-view-college/std-view-col
     StdViewFestComponent,
     StdViewEventsComponent,
     StdViewCollegeComponent,
+    AddEventsComponent,
+    ViewEventsComponent,
+    EditEventsComponent,
+    DeleteEventsComponent,
+    FstDetailsComponent,
+    ChangeMobilenoComponent,
 
   ],
   imports: [

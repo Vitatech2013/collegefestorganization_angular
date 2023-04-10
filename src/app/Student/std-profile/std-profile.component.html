@@ -1,1 +1,110 @@
-<p>std-profile works!</p>
+<div class="main">
+    <mat-card class="card m-auto p-4 mt-4">
+        <form [formGroup]="UpdateProfile" (ngSubmit)="Update()">
+            <div class="row">
+                <h2>Profile</h2>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-6">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>HallTicketno</mat-label>
+                        <input 
+                         matInput
+                         placeholder="HallTicketno"
+                         class="form-control" 
+                         formControlName="hallticketno"
+                        >
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>UserName</mat-label>
+                        <input 
+                         matInput
+                         placeholder="User Name"
+                         class="form-control" 
+                         formControlName="username"
+                        >
+                      </mat-form-field>                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input 
+                         matInput
+                         readonly
+                         type="password"
+                         placeholder="*******"
+                         class="form-control" 
+                         formControlName="pwd"
+                        >
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>StudentName</mat-label>
+                        <input 
+                         matInput
+                         placeholder="Student Name"
+                         class="form-control" 
+                         formControlName="studentname"
+                        >
+                      </mat-form-field>        
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>CollegeName</mat-label>
+                        <input 
+                         matInput
+                         placeholder="collegename"
+                         class="form-control" 
+                         formControlName="college"
+                        >
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>Branch</mat-label>
+                        <input 
+                         matInput
+                         placeholder="branch"
+                         class="form-control" 
+                         formControlName="branch"
+                        >
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>Contactno</mat-label>
+                        <input 
+                         matInput
+                         placeholder="Contactno"
+                         class="form-control" 
+                         formControlName="contactno"
+                        >
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>Email-Id</mat-label>
+                        <input 
+                         matInput
+                         placeholder="User Name"
+                         class="form-control" 
+                         formControlName="email"
+                        >
+                      </mat-form-field>
+                </div>
+            </div>
+            <div mat-dialog-actions align="center">
+                <button mat-raised-button style="background-color: green;color: white;" type="submit" [disabled]="this.UpdateProfile.invalid">Update</button>
+            </div>
+        </form>
+    </mat-card>
+</div>

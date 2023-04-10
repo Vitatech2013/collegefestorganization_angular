@@ -1,0 +1,42 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr  class="table-secondary">
+            <th scope="col">S.No</th>
+            <th scope="col">FestName</th>
+            <th scope="col">EventName</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Co-Ordinater-1</th>
+            <th scope="col">Co-Ordinater-2</th>
+            <th scope="col">Co-Ordinater-3</th>
+            <th scope="col">Val-1</th>
+            <th scope="col">Val-2</th>
+            <th scope="col">Val-3</th>
+            <th scope="col">Image</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let C of ViewEvents index as i">
+            <th>{{i+1}}</th>
+            <td>{{C.festname}}</td>
+            <td>{{C.eventname}}</td>
+            <td>{{C.date | date}}</td>
+            <td>{{C.time}}</td>
+            <td>{{C.coordinater1}}</td>
+            <td>{{C.coordinater2}}</td>
+            <td>{{C.coordinater3}}</td>
+            <td>{{C.valenteer1}}</td>
+            <td>{{C.valenteer2}}</td>
+            <td>{{C.valenteer3}}</td>
+            <td><img class="p-1" src={{C.file}} alt="img" width="100%" height="50px"></td>
+            <td>
+                <a (click)="edit()"><span class="material-symbols-outlined edit">edit</span></a>&nbsp;
+                <a (click)="Delete()"><span class="material-symbols-outlined delete">delete</span></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+

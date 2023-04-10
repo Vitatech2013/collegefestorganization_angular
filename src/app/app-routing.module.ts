@@ -1,3 +1,10 @@
+import { ChangeMobilenoComponent } from './Organizer/change-mobileno/change-mobileno.component';
+import { FstDetailsComponent } from './Organizer/fst-details/fst-details.component';
+import { DeleteEventsComponent } from './Organizer/Events/delete-events/delete-events.component';
+import { EditEventsComponent } from './Organizer/Events/edit-events/edit-events.component';
+import { ViewEventsComponent } from './Organizer/Events/view-events/view-events.component';
+import { AddEventsComponent } from './Organizer/Events/add-events/add-events.component';
+import { OrgHomeComponent } from './Organizer/org-home/org-home.component';
 import { StudentRegComponent } from './Student/student-reg/student-reg.component';
 import { StdViewCollegeComponent } from './Student/std-view-college/std-view-college.component';
 import { StdViewFestComponent } from './Student/std-view-fest/std-view-fest.component';
@@ -33,6 +40,7 @@ const routes: Routes = [
     {path:'stdRegister',component:StudentRegComponent}
   ]},
   {path:'Admin-Home',component:AdminHomeComponent,children:[
+    {path:'',redirectTo:'Add-Org',pathMatch:'full'},
     {path:'Add-Org',component:AddOrgComponent},
     {path:'View-Org',component:ViewOrgComponent},
     {path:'Add-Fest',component:AddFestComponent},
@@ -43,11 +51,21 @@ const routes: Routes = [
     {path:'Changepwd',component:ChangePwdComponent}
   ]},
   {path:'Student-Home',component:StudentHomeComponent,children:[
+    {path:'',redirectTo:'profile',pathMatch:'full'},
     {path:'profile',component:StdProfileComponent},
     {path:'Stdchngpwd',component:StdChngPwdComponent},
     {path:'StdView-Events',component:StdViewEventsComponent},
     {path:'StdView-Fest',component:StdViewFestComponent},
     {path:'StdView-College',component:StdViewCollegeComponent}
+  ]},
+  {path:'Org-Home',component:OrgHomeComponent,children:[
+    {path:'',redirectTo:'Add-Event',pathMatch:'full'},
+    {path:'Add-Event',component:AddEventsComponent},
+    {path:'View-Event',component:ViewEventsComponent},
+    {path:'Edit-Event',component:EditEventsComponent},
+    {path:'Delete-Event',component:DeleteEventsComponent},
+    {path:'Fest-Details',component:FstDetailsComponent},
+    {path:'changeMobileno',component:ChangeMobilenoComponent}
   ]}
 
 ];

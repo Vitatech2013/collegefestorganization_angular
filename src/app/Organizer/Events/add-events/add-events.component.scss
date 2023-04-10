@@ -1,22 +1,16 @@
-.main{
+.btn{
+    display: block;
     align-items: center;
 }
 h2{
     text-align: center;
-    color: darkcyan;
+    color: cadetblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
-mat-card{
-    background-color: azure;
-    width: 60%;
+.main{
+    width: 70%;
+    margin: auto;
 }
 mat-form-field{
     width: 100%;
-}
-.btn{
-    background-color: green;
-    color: white;
-    display: block;
-    justify-content: center;
 }
