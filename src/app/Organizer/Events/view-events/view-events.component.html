@@ -7,9 +7,9 @@
             <th scope="col">EventName</th>
             <th scope="col">Date</th>
             <th scope="col">Time</th>
-            <th scope="col">Co-Ordinater-1</th>
-            <th scope="col">Co-Ordinater-2</th>
-            <th scope="col">Co-Ordinater-3</th>
+            <th scope="col">Co-Ordi-1</th>
+            <th scope="col">Co-Ordi-2</th>
+            <th scope="col">Co-Ordi-3</th>
             <th scope="col">Val-1</th>
             <th scope="col">Val-2</th>
             <th scope="col">Val-3</th>
@@ -32,8 +32,8 @@
             <td>{{C.valenteer3}}</td>
             <td><img class="p-1" src={{C.file}} alt="img" width="100%" height="50px"></td>
             <td>
-                <a (click)="edit()"><span class="material-symbols-outlined edit">edit</span></a>&nbsp;
-                <a (click)="Delete()"><span class="material-symbols-outlined delete">delete</span></a>
+                <a (click)="edit(C)"><span class="material-symbols-outlined edit">edit</span></a>&nbsp;
+                <a (click)="Delete(C)"><span class="material-symbols-outlined delete">delete</span></a>
             </td>
           </tr>
         </tbody>

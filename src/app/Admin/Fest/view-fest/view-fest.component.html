@@ -15,9 +15,9 @@
         <tbody>
           <tr *ngFor="let F of ViewFest index as i">
             <th>{{i+1}}</th>
-            <td>{{F.festname | date}}</td>
+            <td>{{F.festname}}</td>
             <td>{{F.startfrom | date}}</td>
-            <td>{{F.end}}</td>
+            <td>{{F.end | date}}</td>
             <td>{{F.description}}</td>
             <td>{{F.username}}</td>
             <td><img src={{F.file}} width="80px" height="80px"></td>

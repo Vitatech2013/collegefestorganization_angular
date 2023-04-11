@@ -1,1 +1,110 @@
-<p>edit-events works!</p>
+<div class="main">
+    <mat-card class="card  m-auto">
+        <form [formGroup]="EditForm" (ngSubmit)="Edit()">
+            <h2 class="head mt-4">Edit-Events</h2>
+            <div class="row mt-2 m-auto">
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Fest Name</mat-label>
+                        <mat-select formControlName="festname">
+                          <mat-option *ngFor="let f of festName" value="{{f.festname}}">{{f.festname}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>Event Name</mat-label>
+                        <input 
+                         matInput
+                         class="form-control"
+                         formControlName="eventname"
+                        >
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline" >
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="date">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>                      
+                </div>
+            </div>
+            <div class="row m-auto">
+                <div class="col-sm-4">
+                    <mat-form-field class="full-width-input" appearance="outline">
+                        <mat-label>Time</mat-label>
+                        <input 
+                        type="time"
+                         matInput
+                         class="form-control"
+                         formControlName="time"
+                        >
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Co-Ordinater-1</mat-label>
+                        <mat-select formControlName="coordinater1" >
+                          <mat-option *ngFor="let O of Org" value="{{O.username}}">{{O.username}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Co-Ordinater-2</mat-label>
+                        <mat-select formControlName="coordinater2">
+                          <mat-option *ngFor="let O of Org" value="{{O.username}}">{{O.username}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row m-auto">
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Co-Ordinater-3</mat-label>
+                        <mat-select formControlName="coordinater3">
+                          <mat-option *ngFor="let O of Org" value="{{O.username}}">{{O.username}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field  appearance="outline">
+                        <mat-label>Valenteer-1</mat-label>
+                        <mat-select formControlName="valenteer1">
+                          <mat-option *ngFor="let std of stdName" value="{{std.studentname}}">{{std.studentname}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field  appearance="outline">
+                        <mat-label>Valenteer-2</mat-label>
+                        <mat-select formControlName="valenteer2">
+                          <mat-option *ngFor="let std of stdName" value="{{std.studentname}}">{{std.studentname}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="row m-auto">
+                    <div class="col-sm-8">
+                        <mat-form-field  appearance="outline">
+                            <mat-label>Valenteer-3</mat-label>
+                            <mat-select formControlName="valenteer3">
+                              <mat-option *ngFor="let std of stdName" value="{{std.studentname}}">{{std.studentname}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <input  type="file" accept="image/*" class="form-control" formControlName="file" (change)="onSelectFile($event)">     
+                    </div>
+
+                </div>
+            </div>
+            <div class="btn mb-4">
+              <button mat-raised-button color="primary">EDIT</button>
+            </div>
+
+        </form>
+    </mat-card>
+</div>
+

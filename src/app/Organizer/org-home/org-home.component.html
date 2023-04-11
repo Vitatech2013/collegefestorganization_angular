@@ -3,13 +3,16 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar style="color:orange;background-color: antiquewhite;">
+      <!-- <img src="/assets/images/org.jpeg" alt="org"> -->
+      Organizer-Module
+    </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="Add-Event">Add-Events</a>
-      <a mat-list-item routerLink="View-Event">View-Events</a>
-      <a mat-list-item routerLink="Fest-Details">Fest-Details</a>
-      <a mat-list-item routerLink="changeMobileno">ChangeMobileno</a>
-      <a mat-list-item routerLink="/Home">Log-Out</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="Add-Event">Add-Events</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="View-Event">View-Events</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="Fest-Details">Fest-Details</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="changeMobileno">ChangeMobileno</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="/Home">Log-Out</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,7 +25,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>CFO</span>
+      <span>College Fest Organization</span>
     </mat-toolbar>
 <router-outlet></router-outlet>
   </mat-sidenav-content>

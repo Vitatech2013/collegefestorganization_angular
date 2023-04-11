@@ -24,17 +24,17 @@ export class ViewEventsComponent implements OnInit {
     })
 
   }
-  edit() {
+  edit(e:any) {
     this.dialog.open(EditEventsComponent, {
-      width: "45%",
-      // data:e
+      width: "55%",
+       data:e
     })
 
   }
-  Delete() {
+  Delete(d:any) {
     this.dialog.open(DeleteEventsComponent, {
       width: '25%',
-      // data:d
+       data:d
 
     })
   }

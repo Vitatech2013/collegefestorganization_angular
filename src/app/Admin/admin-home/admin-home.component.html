@@ -7,20 +7,20 @@
       <img src="/assets/images/logo1.png" alt="hhh">
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="Add-Org">Organizers</a>
-      <a mat-list-item routerLink="View-Org">View-Organizers</a>
-      <a mat-list-item routerLink="Add-Fest">Fests</a>
-      <a mat-list-item routerLink="View-Fest">Fest Details</a>
-      <a mat-list-item routerLink="Add-College">Other Colleges</a>
-      <a mat-list-item routerLink="View-College">College-Details</a>
-      <a mat-list-item routerLink="Events">Events</a>
-      <a mat-list-item routerLink="Changepwd">Change Password</a>
-      <a mat-list-item routerLink="/Home">Logout</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="Add-Org">Organizers</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="View-Org">View-Organizers</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="Add-Fest">Fests</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="View-Fest">Fest Details</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="Add-College">Other Colleges</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="View-College">College-Details</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="Events">Events</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="Changepwd">Change Password</a>
+      <a mat-list-item [routerLinkActive]="['is-active']" routerLink="/Home">Logout</a>
 
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar >
+    <mat-toolbar color="primary">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -29,7 +29,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span style="color:darkorchid;font-family: cursive;font-weight: 700;">College Fest Organization</span>
+      <span>College Fest Organization</span>
     </mat-toolbar>
 <ng-container >
   <router-outlet></router-outlet>

@@ -26,7 +26,8 @@ img{
   width: 100%;
   background-size: cover;
 }
-.mat-nav-list{
-  background: rgb(34,193,195);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 2%, rgba(81,46,124,1) 74%);
+
+.is-active {
+  background-color: #3f51b5;
+  color: #fff !important;
 }
